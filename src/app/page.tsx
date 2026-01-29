@@ -120,15 +120,18 @@ export default function LandingPage() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative h-screen flex items-center pt-20">
+        <section className="relative h-screen flex items-center pt-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <Image
-              src="/assets/hero.jpg"
-              alt="Kid learning to swim"
-              fill
-              className="object-cover brightness-50"
-              priority
-            />
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src="/assets/hero-video.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-black/40" />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/50" />
           </div>
 
